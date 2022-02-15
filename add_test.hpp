@@ -41,4 +41,11 @@ TEST(AddTest, AddEvaluateZero) {
     EXPECT_EQ(0.0, test->evaluate());
 }
 
+TEST(AddTest, AddStringZero) {
+    Op* value1 = new Op(0.0);
+    Op* value2 = new Op(0.0);
+    Add* test = new Add(value1, value2);
+    EXPECT_EQ("(0.000000 + 0.000000)", test->stringify());
+}
+
 #endif //__ADD_TEST_HPP__
