@@ -9,9 +9,11 @@ class Add : public Base {
             left = lhs;
             right = rhs;
         }
+    
         double evaluate() { 
             return left->evaluate() + right->evaluate();
         }
+    
         std::string stringify() { 
             return "(" + left->stringify() + " + " + right->stringify() + ")";
         }
