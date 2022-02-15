@@ -11,7 +11,7 @@ class Sub : public Base {
         }
   
         double evaluate() { 
-            return left->evaluate() + right->evaluate();
+            return left->evaluate() - right->evaluate();
         }
     
         std::string stringify() { 
