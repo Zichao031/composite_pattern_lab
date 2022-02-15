@@ -10,9 +10,9 @@ class Op : public Base {
             opValue = value;
         }
         
-        virtual double evaluate() { return opValue; }
+        double evaluate() { return opValue; }
         
-        virtual std::string stringify() { return std::to_string(opValue); }
+        std::string stringify() { return std::to_string(opValue); }
     
     private:
         double opValue = 0;
