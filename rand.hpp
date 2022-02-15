@@ -7,7 +7,7 @@
 
 class Rand : public Base {
     public:
-        Op(double value) : Base() { 
+        Rand() : Base() { 
             opValue = rand() % 100;
         }
         
