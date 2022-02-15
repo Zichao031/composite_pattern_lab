@@ -17,7 +17,7 @@ TEST(MultTest, MultStringifyPostive){
     Op* value1 = new Op(2.0);
     Op* value2 = new Op(3.0);
     Mult* value3 = new Mult(value1, value2);
-    EXPECT_EQ("(2.000000 * 3.000000)", value3->Stringify());
+    EXPECT_EQ("(2.000000 * 3.000000)", value3->stringify());
 }
 
 TEST(MultTest, MultEvaluateNegative){
@@ -31,7 +31,7 @@ TEST(MultTest, MultStringifyNegative){
     Op* value1 = new Op(-2.0);
     Op* value2 = new Op(3.0);
     Mult* value3 = new Mult(value1, value2);
-    EXPECT_EQ("(-2.000000 * 3.000000)", value3->Stringify());
+    EXPECT_EQ("(-2.000000 * 3.000000)", value3->stringify());
 }
 
 TEST(MultTest, MultEvaluateZero){
@@ -45,7 +45,7 @@ TEST(MultTest, MultStringifyZero){
     Op* value1 = new Op(0.0);
     Op* value2 = new Op(3.0);
     Mult* value3 = new Mult(value1, value2);
-    EXPECT_EQ("(0.000000 * 3.000000)", value3->Stringify());
+    EXPECT_EQ("(0.000000 * 3.000000)", value3->stringify());
 }
 
 #endif
