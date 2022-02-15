@@ -4,10 +4,6 @@
 #include "base.hpp"
 
 class Add : public Base {
-    private:
-        Base* left;
-        Base* right;
-        
     public:
         Add(Base* lhs, Base* rhs) : Base() {
             left = lhs;
@@ -19,7 +15,11 @@ class Add : public Base {
         std::string stringify() { 
             return "(" + left->stringify() + " + " + right->stringify() + ")";
         }
-
+    
+    private:
+        Base* left;
+        Base* right;
+        
 };
 
 #endif //__ADD_HPP__
