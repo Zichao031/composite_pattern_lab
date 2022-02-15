@@ -41,7 +41,7 @@ TEST(MultTest, MultEvaluateZero){
     EXPECT_EQ(0.0, value3->evaluate());
 }
 
-TEST(MultTest, MultStringifyNegative){
+TEST(MultTest, MultStringifyZero){
     Op* value1 = new Op(0.0);
     Op* value2 = new Op(3.0);
     Op* value3 = new Mult(value1, value2);
