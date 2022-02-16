@@ -6,8 +6,8 @@
 #include "op.hpp"
 
 TEST(OpTest, OpEvaluateNonZero) {
-    Op* test = new Op(8);
-    EXPECT_EQ(test->evaluate(), 8);
+    Op* test = new Op(8.0);
+    EXPECT_EQ(test->evaluate(), 8.0);
 }
 
 #endif //__OP_TEST_HPP__
