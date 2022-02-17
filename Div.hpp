@@ -12,14 +12,14 @@ public:
         right = rhs;
     }
 
-    double evaluate() {
+    virtual double evaluate() {
         if (right->evaluate() == 0.0) {
             return std::numeric_limits<double>::max();
         }
         return left->evaluate() / right->evaluate();
     }
 
-    std::string stringify() {
+    virtual std::string stringify() {
         return '(' + left->stringify() + " / " + right->stringify() + ')';
     }
 
