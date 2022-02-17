@@ -6,9 +6,9 @@
 
 TEST(PowTest, PowEvaluateOne){
     Op* value1 = new Op(2.0);
-    Op* value2 = new Op(1.0);
+    Op* value2 = new Op(3.0);
     Pow* value3 = new Pow(value1, value2);
-    EXPECT_EQ(2.0, value3->evaluate());
+    EXPECT_EQ(8.0, value3->evaluate());
 }
 
 TEST(PowTest, PowStringifyOne){
@@ -58,6 +58,20 @@ TEST(PowTest, PowStringifyNegative){
     Op* value2 = new Op(2.0);
     Pow* value3 = new Pow(value1, value2);
     EXPECT_EQ("(-2.000000 ** 2.000000)", value3->stringify());
+}
+
+TEST(PowTest, PowEvaluateNegative2){
+    Op* value1 = new Op(-2.0);
+    Op* value2 = new Op(3.0);
+    Pow* value3 = new Pow(value1, value2);
+    EXPECT_EQ(-8.0, value3->evaluate());
+}
+
+TEST(PowTest, PowStringifyNegative2){
+    Op* value1 = new Op(-2.0);
+    Op* value2 = new Op(3.0);
+    Pow* value3 = new Pow(value1, value2);
+    EXPECT_EQ("(-2.000000 ** 3.000000)", value3->stringify());
 }
 
 #endif
