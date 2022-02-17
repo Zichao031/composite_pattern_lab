@@ -2,6 +2,8 @@
 #define __DIV_HPP__
 
 #include "base.hpp"
+#include <stdexcept>
+#include <limits>
 
 class Div : public Base {
 public:
@@ -11,6 +13,9 @@ public:
     }
 
     double evaluate() {
+        if (right->evaluate() == 0.0) {
+            return std::numeric_limits<double>::max();
+        }
         return left->evaluate() / right->evaluate();
     }
 
